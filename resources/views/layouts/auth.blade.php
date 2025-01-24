@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{csrf_token()}}">
+
+
     <title>@yield('title', 'Default Title')</title>
     @vite(['resources/css/auth.css', 'resources/js/auth.js'])
 </head>
@@ -34,7 +37,7 @@
 </style>
 <body>
 
-    <div class="theme-buttons" style="display:flex;">
+    {{-- <div class="theme-buttons" style="display:flex;" >
 
             <button  onclick="changeTheme('default')">Default</button>
             <button  onclick="changeTheme('oceanic')">Oceanic</button>
@@ -44,8 +47,20 @@
             <button  onclick="changeTheme('midnight')">Midnight Blue</button>
             <button  onclick="changeTheme('lavender')">Soft Lavender</button>
             <button  onclick="changeTheme('electric')">Electric Purple</button>
-    </div>
+    </div> --}}
     <!-- Content from other templates -->
+  {{-- Success Message --}}
+@if(session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
+{{-- Error Message --}}
+@if(session('error'))
+<div class="alert alert-danger" style="color:red; font-size: 12px;">{{ session('error') }}</div>
+@endif
+
     @yield('content')
 
         <button class="theme-toggle-button" onclick="toggleThemeButtons()">Show/Hide Themes</button>

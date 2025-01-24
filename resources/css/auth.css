@@ -29,11 +29,7 @@ body {
 }
 
 /* General Container Styling */
-.login-container,
-.signup-container,
-.forgot-password-container,
-.add-token-container,
-.reset-password-container {
+.default-container {
     text-align: center;
     padding: 50px;
     width: 400px;
@@ -43,55 +39,38 @@ body {
 
 /* Responsive Containers */
 @media (max-width: 768px) {
-    .login-container,
-    .signup-container,
-    .forgot-password-container,
-    .add-token-container,
-    .reset-password-container {
+    .default-container {
         width: 90%;
         padding: 30px;
     }
 }
 
 @media (max-width: 480px) {
-    .login-container,
-    .signup-container,
-    .forgot-password-container,
-    .add-token-container,
-    .reset-password-container {
+    .default-container {
         width: 100%;
         padding: 20px;
     }
 }
 
 /* Titles */
-.login-title,
-.signup-title,
-.forgot-password-title,
-.add-token-title,
-.reset-password-title {
+.default-title
+{
     font-size: 28px;
     color: var(--text-color);
     margin-bottom: 20px;
 }
 
 /* Forms */
-.login-form,
-.signup-form,
-.forgot-password-form,
-.add-token-form,
-.reset-password-form {
+.default-form
+{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 /* Inputs */
-.login-input,
-.signup-input,
-.forgot-password-input,
-.add-token-input,
-.reset-password-input {
+.default-input
+{
     width: 100%;
     padding: 15px;
     font-size: 18px;
@@ -102,31 +81,22 @@ body {
 }
 
 /* Input Hover and Focus States */
-.login-input:hover,
-.signup-input:hover,
-.forgot-password-input:hover,
-.add-token-input:hover,
-.reset-password-input:hover {
+.default-input:hover
+{
     border-color: var(--input-hover-border-color);
     box-shadow: 0 2px 6px rgba(108, 99, 255, 0.2);
 }
 
-.login-input:focus,
-.signup-input:focus,
-.forgot-password-input:focus,
-.add-token-input:focus,
-.reset-password-input:focus {
+.default-input:focus
+{
     border-color: var(--input-hover-border-color);
     box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
     outline: none;
 }
 
 /* Disabled Input */
-.login-input:disabled,
-.signup-input:disabled,
-.forgot-password-input:disabled,
-.add-token-input:disabled,
-.reset-password-input:disabled {
+.default-input:disabled
+{
     background-color: var(--background-color);
     border-color: var(--button-disabled-bg-color);
     color: var(--input-disabled-text-color);
@@ -134,11 +104,8 @@ body {
 }
 
 /* Buttons */
-.forgot-password-button,
-.add-token-button,
-.reset-password-button,
-.login-button,
-.signup-button {
+.default-button
+{
     width: 100%;
     background-color: var(--primary-color);
     color: white;
@@ -152,30 +119,21 @@ body {
 }
 
 /* Button Hover and Active States */
-.forgot-password-button:hover,
-.add-token-button:hover,
-.reset-password-button:hover,
-.login-button:hover,
-.signup-button:hover {
+.default-button:hover
+{
     background-color: var(--primary-hover-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.forgot-password-button:active,
-.add-token-button:active,
-.reset-password-button:active,
-.login-button:active,
-.signup-button:active {
+.default-button:active
+{
     transform: scale(0.98);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Disabled Button */
-.forgot-password-button:disabled,
-.add-token-button:disabled,
-.reset-password-button:disabled,
-.login-button:disabled,
-.signup-button:disabled {
+.default:disabled
+{
     background-color: var(--button-disabled-bg-color);
     color: var(--button-disabled-text-color);
     cursor: not-allowed;
