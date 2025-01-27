@@ -36,6 +36,7 @@ class UserController extends Controller
             $user->field = $validatedData['selectedServices'];
             $user->personal_img = $validatedData['profilePicture'];
             $user->bio = $validatedData['bio'];
+            $user->status = 'active';
             $user->save();
 
             // Return a success response

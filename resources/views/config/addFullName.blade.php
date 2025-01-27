@@ -12,7 +12,7 @@
         <input type="text" name="third_name" placeholder="Third Name" class="default-input" required>
         <input type="text" name="last_name" placeholder="Last Name" class="default-input" required>
         <div class="buttons">
-            <a href="#">Skip for now</a>
+            <a href="#"></a>
             <button type="submit" class="btn-primary">Next</button>
         </div>
     </form>

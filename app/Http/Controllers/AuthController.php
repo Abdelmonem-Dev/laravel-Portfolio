@@ -34,6 +34,7 @@ class AuthController extends Controller
         if($user){
             Auth::login($user);
                 return redirect()->route('auth.verifyEmail',['email' => $request->email])->with('success', 'Account created successfully');
+
             }else{
                 return redirect()->back()->with('error', 'An error occurred while creating your account');
             }
@@ -52,7 +53,7 @@ class AuthController extends Controller
 
     // Attempt to log in
     if (Auth::attempt(['email' => $validated['email'], 'password' => $validated['password']],$remember)) {
-        return redirect()->route('portfolio')->with('success', 'Login successful!');
+        return redirect()->route('main.home')->with('success', 'Login successful!');
     } else {
         return redirect()->back()->with('error', 'Invalid login credentials.')->withInput();
     }

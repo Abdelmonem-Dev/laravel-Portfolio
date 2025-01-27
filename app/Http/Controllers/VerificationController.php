@@ -99,12 +99,12 @@ class VerificationController extends Controller
         }
 
         if ($user->hasVerifiedEmail()) {
-            return redirect()->route('portfolio')->with('message', 'Email already verified.');
+            return redirect()->route('congif.addName')->with('message', 'Email already verified.');
         }
 
         $user->markEmailAsVerified();
 
-        return redirect()->route('portfolio')->with('message', 'Email successfully verified.');
+        return redirect()->route('congif.addName')->with('message', 'Email successfully verified.');
     }
 
 

@@ -10,6 +10,10 @@ Route::controller(AuthController::class)->group(function () {
     Route::get('/signup', function(){ return view('auth.signup'); })->name('auth.signup');
     Route::post('/signup', 'signup')->name('auth.signupAction');
 
+    Route::get('/test', function () {
+        return 'Testing middleware';
+    })->middleware(['complete.user.data']);
+
     Route::get('/login', function(){ return view('auth.login'); })->name('auth.login');
     Route::post('/login', 'login')->name('auth.loginAction');
 
@@ -51,27 +55,39 @@ Route::post('/forgotPassword', [VerificationController::class,'forgotPassword'])
 
 
 
-
-
-
+Route::middleware(['complete.user.data'])->group(function () {
+Route::get('/profile', function () {
+    return view('main.profile');
+})->name('main.profile');
 
 Route::get('/portfolio', function () {
-    return view('portfolio');
-})->name('portfolio');
+    return view('main.portfolio');
+})->name('main.portfolio');
 
-Route::get('/addName', function () {
-    return view('config.addFullName');
-})->name('config.addName');
-Route::get('/addPicture', function () {
-    return view('config.addPicture');
-})->name('config.addPicture');
-Route::get('/addBio', function () {
-    return view('config.addBio');
-})->name('config.addBio');
-Route::get('/addField', function () {
-    return view('config.addField');
-})->name('config.addField');
-Route::get('/QuestionOne', function () {
-    return view('config.questions.QuestionOne');
-})->name('config.questions.QuestionOne');
+});
+Route::get('/home', function () {
+    return view('main.home');
+})->name('main.home');
+
+
+
+Route::middleware(['data.completed'])->group(function () {
+
+    Route::get('/addName', function () {
+        return view('config.addFullName');
+    })->name('config.addName');
+    Route::get('/addPicture', function () {
+        return view('config.addPicture');
+    })->name('config.addPicture');
+    Route::get('/addBio', function () {
+        return view('config.addBio');
+    })->name('config.addBio');
+    Route::get('/addField', function () {
+        return view('config.addField');
+    })->name('config.addField');
+    Route::get('/QuestionOne', function () {
+        return view('config.questions.QuestionOne');
+    })->name('config.questions.QuestionOne');
+
+});
 

@@ -63,7 +63,7 @@
 
     @yield('content')
 
-        <button class="theme-toggle-button" onclick="toggleThemeButtons()">Show/Hide Themes</button>
+        {{-- <button class="theme-toggle-button" onclick="toggleThemeButtons()">Show/Hide Themes</button> --}}
 
 </body>
 </html>
