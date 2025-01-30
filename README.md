@@ -13,6 +13,7 @@ This project provides user registration, login, password reset, email verificati
 ## ✨ Features  
 ✅ **User Registration & Login**  
 ✅ **Email Verification**  
+✅ **Remember me**  
 ✅ **Password Reset**  
 ✅ **Role-Based Authentication (Admin & User)**  
 ✅ **Session-Based Authentication**  
