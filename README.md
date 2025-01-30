@@ -35,25 +35,19 @@ This project provides user registration, login, password reset, email verificati
    ```sh
    git clone https://github.com/username/laravel-auth-system.git
    cd laravel-auth-system
+   
 Install Dependencies
 
-sh
-Copy
-Edit
 composer install
 npm install && npm run build
 Setup Environment
-Copy the example environment file and configure your database and email settings:
 
-sh
-Copy
-Edit
+Copy the example environment file and configure your database and email settings:
 cp .env.example .env
 Database Configuration (.env file)
 
-makefile
-Copy
-Edit
+
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -62,9 +56,7 @@ DB_USERNAME=your_database_user
 DB_PASSWORD=your_database_password
 Email Configuration (.env file - for email verification & password reset)
 
-makefile
-Copy
-Edit
+
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.yourmailserver.com
 MAIL_PORT=587
@@ -74,21 +66,14 @@ MAIL_FROM_ADDRESS="your_email@example.com"
 MAIL_FROM_NAME="Your App Name"
 Generate Application Key
 
-sh
-Copy
-Edit
-php artisan key:generate
-Run Migrations & Seed Database
 
-sh
-Copy
-Edit
-php artisan migrate --seed
+php artisan key:generate
+Run Migrations
+
+
+
 Start the Application
 
-sh
-Copy
-Edit
 php artisan serve
 🔑 Authentication Flow
 User Registration: Users can sign up and receive an email verification link.
@@ -96,10 +81,8 @@ Login System: Secure authentication with session handling.
 Email Verification: Users must verify their email before accessing certain features.
 Password Reset: Users can reset their password via email.
 Role-Based Access: Admin and user roles with middleware-based access control.
+
 📂 Project Structure
-bash
-Copy
-Edit
 📦 laravel-auth-system  
  ┣ 📂 app/Http/Controllers/Auth  
  ┃ ┣ 📜 LoginController.php  
@@ -114,14 +97,20 @@ Edit
  ┣ 📜 routes/web.php  
  ┗ 📜 .env.example  
 🚀 Contributing
-Pull requests and contributions are welcome! Follow these steps:
 
+Pull requests and contributions are welcome! Follow these steps:
 Fork the repository
 Create a new branch (feature/new-feature)
 Commit changes
 Push to your fork and create a Pull Request
 📄 License
 This project is licensed under the MIT License.
+
+ ## Support My Work
+
+If you find this project useful, please consider supporting me through [GitHub Sponsors](https://github.com/sponsors/Abdelmonem-Dev). Your support helps me dedicate more time to maintaining and improving this project.
+
+[![Sponsor](https://img.shields.io/badge/-Sponsor-red?style=flat&logo=GitHub%20Sponsors)](https://github.com/sponsors/Abdelmonem-Dev)
 
 ❤️ Support My Work
 If you found this project useful, please consider supporting me through GitHub Sponsors!
