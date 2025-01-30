@@ -37,7 +37,7 @@ This project provides user registration, login, password reset, email verificati
    cd laravel-auth-system
    
 Install Dependencies
-
+```
 composer install
 npm install && npm run build
 Setup Environment
@@ -70,7 +70,7 @@ Generate Application Key
 php artisan key:generate
 Run Migrations
 
-
+```
 
 Start the Application
 
